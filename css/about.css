@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #6c63ff;
+    --color-sucess: #00bf8e;
+    --color-warning: #f75842;
+    --color-danger-variant: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-dark: #000;
+    --color--light: rgba(255, 2555, 255, 0.7);
+    --color-bg2: #1f2641;
+    --color-bg1: #2e3267;
+    --color-bg3: #424890;
+}
+
+html {
+    position: relative;
+    background-color: var(--color-bg2);
+}
+body{
+    height: fit-content;
+}
+
+/* ----------------------NAVBAR-------------------------------- */
+.navbar {
+    background-color: var(--color-bg2);
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    color: white;
+}
+
+.navbar h1 {
+    font-size: 2rem;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar ul li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.navbar ul li a {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+}
+.navbar img{
+    display: none;
+}
+.scroll{
+    background-color: #00bf8e;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    transition: all .5s ease-in-out;
+}
+
+
+
+
+/* ---------------------------------------------------ACIEVEMENTS------------------------ */
+.achievements{
+    height: 70vh;
+    background-color: var(--color-bg1);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 0 4rem;
+    color: white;
+}
+.achievements--box1{
+    display: grid;
+    place-items: center;
+}
+.achievements--box1 img{
+    height: 100%;
+}
+.achievements--box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.7rem;
+}
+.achievements--iconbox{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(min(100%,50px),1fr));
+    gap: 5rem;
+}
+.achievicon{
+    border-radius: 1rem;
+    background-color: var(--color-bg3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .7vw;
+    padding: 2.2rem 2rem;
+}
+.achievicon:hover{
+    box-shadow: inset 0 0 1rem black;
+}
+.achievements--iconbox1 img{
+    border-radius: .3rem;
+    background-color: #55ff00;
+    height: 2.4rem;
+    padding: .4rem .3rem;
+}
+.achievements--iconbox2 img{
+    border-radius: .3rem;
+    background-color: #00ffff;
+    height: 2.4rem;
+    padding: .4rem .3rem;
+}
+.achievements--iconbox3 img{
+    border-radius: .3rem;
+    background-color: #ae00ff;
+    height: 2.4rem;
+    padding: .4rem .3rem;
+}
+
+
+
+
+/* -------------------------------------------------TEAM ------------------------- */
+.teams{
+    background-color: var(--color-bg1);
+    padding: 5rem;
+    box-shadow: inset 0 0 3rem rgb(0, 0, 0);
+}
+.team{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.team_members{
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+.team_members img{
+    border: none;
+    border-radius: 1rem;
+    height: 23vh;
+    width: 10vw;
+    filter: grayscale(1);
+}
+.team_box{
+    border: 2px solid rgb(28, 30, 123);
+    background-color: var(--color-bg3);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    box-shadow: inset 0 0 1rem rgb(28, 30, 123);
+    padding: 2rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.team-socials img{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 0;
+    cursor: pointer;
+}
+.team-socials{
+    border-radius: .5rem 0 0 .5rem;
+    background-color: #1b3ccc;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    padding: .4vw .2vw;
+    transition: all .2s ease-in-out;
+}
+.team_box:hover .team-socials{
+    right: 0;
+}
+.team_box:hover{
+    background-image: linear-gradient(rgb(56, 61, 161),rgb(11, 56, 191));
+    box-shadow: none;
+}
+
+
+
+
+/* --------------------------------FOOTER---------------------------------------- */
+.footer{
+    position: relative;
+    color: white;
+    padding: 5vh 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg3);
+}
+
+.footer--main{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+.footer--box{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer ul{
+    padding-left: 0;
+}
+.footer ul li{
+    opacity: 0.5;
+}
+
+.footer--copyright{
+    padding: 1rem;
+    color: white;
+    background-color: var(--color-bg1);
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------TABLETS RESPONSIVE------------------- */
+
+@media screen and (max-width:1465px) {
+    .achievements{
+        height: fit-content;
+        grid-template-columns: 1fr;
+        padding: 6vw 4vw;
+    }
+    .achievements--box2{
+        align-items: center;
+    }
+    .achievements--box2 p{
+        display: none;
+    }
+
+
+    .team_box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2vh;
+        padding: 2rem 0rem;
+    }
+    .team_members{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 2rem;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width : 860px) {
+    .navbar{
+        position: relative;
+        width: 100vw;
+    }
+    #ul{
+        border: none;
+        display: none;
+        padding: 1.5vw;
+        position: absolute;
+        right: 14vw;
+        background: linear-gradient(-120deg,transparent,rgb(14, 102, 108),rgb(8, 67, 168));
+        top: 8vw;
+    }
+    .navbar ul li{
+        padding: 2vw;
+    }
+    .navbar ul li a{
+        font-size: 4.5vw;
+    }
+    #hamburger{
+        display: block;
+        position: absolute;
+        right: 10vw;
+        top: 1vw;
+    }
+    #close{
+        height: 6vw;
+        position: absolute;
+        right: 10vw;
+        top: 1vw;
+    }
+
+    /* -----------ACHIEVEMENTS------------ */
+    .achievements{
+        height: fit-content;
+        grid-template-columns: 1fr;
+        padding: 0 0;
+    }
+    .achievements--box2 p{
+        display: none;
+    }
+    .achievements--box2{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4vw 0;
+    }
+    .achievements--iconbox{
+        position: relative;
+        right: 7vw;
+    }
+    .achievements--iconbox{
+        font-size: 2.5vw;
+        width: 10vw;
+        display: grid;
+        padding: 0;
+        grid-template-columns: 1fr;
+        gap: 5vw;
+    }
+
+
+/* --------------------TEAM----------- */
+.teams{
+    padding: 4vh 4vw;
+}
+.team_members{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+.team_box:nth-child(5){
+    display: none;
+}
+.team_box:nth-child(6){
+    display: none;
+}
+.team_box:nth-child(7){
+    display: none;
+}
+.team_box:nth-child(8){
+    display: none;
+}
+.team_members img{
+    height: 13vh;
+    width: 15vw;
+}
+.team_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    padding: 2rem 2rem;
+}
+.team-socials img{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 0;
+    cursor: pointer;
+}
+.team-socials{
+    border-radius: .5rem 0 0 .5rem;
+    background-color: #1b3ccc;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    padding: .4vw .2vw;
+    transition: all .2s ease-in;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------FOOTER----------- */
+
+
+
+    .footer--copyright{
+        padding: 1rem;
+        font-size: 2vw;
+    }
+    .footer--main{
+        display: flex;
+        gap: 2rem;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 3vw;
+    }
+    .footer--c1{
+        display: none;
+    }
+    .footer--c4{
+        display: none;
+    }
+}
